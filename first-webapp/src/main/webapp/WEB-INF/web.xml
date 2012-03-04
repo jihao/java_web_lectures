@@ -1,51 +1,58 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="first-webapp" version="2.5">
   <display-name>Archetype Created Web Application</display-name>
-  
   <filter>
-  	<filter-name>FilterA</filter-name>
-  	<display-name>FilterA</display-name>
-  	<description></description>
-  	<filter-class>com.haojii.javaweb.first_webapp.filters.FilterA</filter-class>
+    <filter-name>FilterA</filter-name>
+    <filter-class>com.haojii.javaweb.first_webapp.filters.FilterA</filter-class>
   </filter>
   <filter>
-  	<filter-name>FilterB</filter-name>
-  	<display-name>FilterB</display-name>
-  	<description></description>
-  	<filter-class>com.haojii.javaweb.first_webapp.filters.FilterB</filter-class>
+    <filter-name>FilterB</filter-name>
+    <filter-class>com.haojii.javaweb.first_webapp.filters.FilterB</filter-class>
   </filter>
   <filter>
-  	<filter-name>FilterC</filter-name>
-  	<display-name>FilterC</display-name>
-  	<description></description>
-  	<filter-class>com.haojii.javaweb.first_webapp.filters.FilterC</filter-class>
+    <filter-name>FilterC</filter-name>
+    <filter-class>com.haojii.javaweb.first_webapp.filters.FilterC</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>FilterA</filter-name>
-  	<url-pattern>/*</url-pattern>
+    <filter-name>FilterA</filter-name>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
   <filter-mapping>
-  	<filter-name>FilterB</filter-name>
-  	<url-pattern>/*</url-pattern>
+    <filter-name>FilterB</filter-name>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
   <filter-mapping>
-  	<filter-name>FilterC</filter-name>
-  	<url-pattern>/*</url-pattern>
+    <filter-name>FilterC</filter-name>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
-  
-  
+  <listener>
+    <listener-class>com.haojii.javaweb.first_webapp.listeners.ServletContextListenerImpl</listener-class>
+  </listener>
   <servlet>
-  	<servlet-name>FirstServlet</servlet-name>
-  	<display-name>FirstServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.haojii.javaweb.first_webapp.FirstServlet</servlet-class>
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>com.haojii.javaweb.first_webapp.FirstServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListUserServlet</servlet-name>
+    <servlet-class>com.haojii.javaweb.first_webapp.usermgmt.ListUserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>FirstServlet</servlet-name>
-  	<url-pattern>/FirstServlet</url-pattern>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>/FirstServlet</url-pattern>
   </servlet-mapping>
-  
+  <servlet-mapping>
+    <servlet-name>ListUserServlet</servlet-name>
+    <url-pattern>/users</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SessionMgmtServlet</display-name>
+    <servlet-name>SessionMgmtServlet</servlet-name>
+    <servlet-class>com.haojii.javaweb.first_webapp.usermgmt.SessionMgmtServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionMgmtServlet</servlet-name>
+    <url-pattern>/user/login</url-pattern>
+    <url-pattern>/user/logout</url-pattern>
+  </servlet-mapping>
 </web-app>
