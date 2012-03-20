@@ -9,4 +9,4 @@ I add [https://github.com/SpringSource/spring-mvc-showcase](spring-mvc-showcase)
 >$ git submodule update
 
 *Reference*
-[http://help.github.com/submodules/](github:help Working with submodules
+[http://help.github.com/submodules/](github:help Working with submodules)
