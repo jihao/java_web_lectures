@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="foo1" name="foo1" class="com.haojii.spring.injection.constructor_based.Foo">
+		<constructor-arg ref="baz1"></constructor-arg>
+		<constructor-arg ref="bar1"></constructor-arg>
+	</bean>
+	
+	<bean id="bar1" class="com.haojii.spring.injection.constructor_based.Bar"></bean>
+	<bean id="baz1" class="com.haojii.spring.injection.constructor_based.Baz"></bean>
+
+</beans>
