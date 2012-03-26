@@ -12,5 +12,8 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
+
+<a href="${pageContext.request.contextPath}" >Home</a> (render by JSTLView)
+<a href="tilesHome" >tilesHome</a> (render by TilesView)
 </body>
 </html>
