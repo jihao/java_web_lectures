@@ -1,12 +1,3 @@
-Saves the materials of internal lectures about Java Web Programming.
+Demo of integrate TilesView and JSTLView by using org.springframework.web.servlet.view.ResourceBundleViewResolver
 
-## submodule ##
-
-I add [https://github.com/SpringSource/spring-mvc-showcase](spring-mvc-showcase) as submodule, you can pull the submodule into the current repository.
-
->$ git submodule init
-
->$ git submodule update
-
-*Reference*
-[http://help.github.com/submodules/](github:help Working with submodules)
+Run this project in Spring STS, navigate to http://localhost:8080/first-springmvc/
